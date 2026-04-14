@@ -3,8 +3,13 @@
   "displayName": "MITS Tailwind CSS v4 Tutorial",
   "description": "Build a complete, responsive hiking blog from scratch using Tailwind CSS v4 and Vite — utility-first styling, custom design tokens, responsive grid layouts, hover animations, and a dark mode toggle persisted via localStorage.",
   "url": "https://github.com/marketable-it-skills/mits-tailwind-tutorial",
-  "skillDomainIds": [1],
-  "languages": ["EN", "HU"],
+  "skillDomainIds": [
+    1
+  ],
+  "languages": [
+    "EN",
+    "HU"
+  ],
   "authors": [
     {
       "name": "Katalin Oláh",
@@ -15,9 +20,18 @@
       "url": "https://hu.linkedin.com/in/zoltan-sisak"
     }
   ],
-  "technologies": ["Tailwind", "Vite", "JavaScript"],
-  "tags": ["Dark mode", "Responsive", "Grid", "Git"],
-  "status": "draft",
+  "technologies": [
+    "Tailwind",
+    "Vite",
+    "JavaScript"
+  ],
+  "tags": [
+    "Dark mode",
+    "Responsive",
+    "Grid",
+    "Git"
+  ],
+  "status": "published",
   "moduleNames": {
     "1": "Project Setup + First Tailwind Classes + Nav + Hero",
     "2": "Content Sections + Grid Layouts + Hover Effects",
