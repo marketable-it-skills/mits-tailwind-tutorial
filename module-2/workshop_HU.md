@@ -1,8 +1,8 @@
-# 2. modul műhelymunka: Tartalmi szekciók + Rácselrendezések + Hover hatások
+# 2. modul workshop: Tartalmi szekciók + rácsos elrendezések + hover-hatások
 
-**Cél**: Adj hozzá négy tartalmi szekciót a VadonSzava oldalhoz — Előnyök rács, Túraútvonalak, Felszerelés és Fotógaléria — a Tailwind reszponzív rácselrendezéseivel és interaktív hover utility-jeivel.
+**Cél**: Adj hozzá négy tartalmi szekciót a VadonSzava oldalhoz — Előnyök rácsa, Túraútvonalak, Felszerelés és Fotógaléria — a Tailwind reszponzív rácsos elrendezéseivel és interaktív hover-segédosztályaival.
 
-**Kiindulópont**: Az 1. modul megoldása (navigáció + hero, Tailwind v4 konfigurálva, design tokenek definiálva).
+**Kiindulópont**: Az 1. modul megoldása (navigáció + hero, Tailwind v4 konfigurálva, dizájntokenek definiálva).
 
 ---
 
@@ -29,9 +29,9 @@ Nyisd meg a fejlesztői szervert (`npm run dev`). A böngészőben navigálj a `
 
 ---
 
-## 2. feladat: Előnyök rács
+## 2. feladat: Előnyök rácsa
 
-Az Előnyök szekció közvetlenül a hero alatt helyezkedik el. Árnyalt zöld háttere van és három kártya, mindegyiken egy SVG ikon, cím és rövid leírás.
+Az Előnyök szekció közvetlenül a hero alatt helyezkedik el. Tónusozott zöld háttere van és három kártya, mindegyiken egy SVG ikon, cím és rövid leírás.
 
 ### 2.1. lépés: A szekció hozzáadása a `</section>` (hero záró tag) után
 
@@ -43,9 +43,9 @@ Az Előnyök szekció közvetlenül a hero alatt helyezkedik el. Árnyalt zöld 
 </section>
 ```
 
-Mentés. Egy zöldes árnyalatú sáv jelenik meg a hero alatt.
+Mentés. Egy zöldes tónusú sáv jelenik meg a hero alatt.
 
-### 2.2. lépés: A szekció fejléc hozzáadása
+### 2.2. lépés: A szekciófejléc hozzáadása
 
 A `<div>` belsejébe:
 
@@ -58,7 +58,7 @@ A `<div>` belsejébe:
 
 A `text-heading` és a `text-text` az 1. modulban definiált szemantikus tokeneket használja — ez a szöveg automatikusan a helyes sötét módú színekre vált majd a 3. modulban.
 
-### 2.3. lépés: A 3-oszlopos rács hozzáadása
+### 2.3. lépés: A 3 oszlopos rács hozzáadása
 
 A fejléc `<div>` után:
 
@@ -88,7 +88,7 @@ A rács `<div>` belsejébe:
 </div>
 ```
 
-Mentés. Az árnyalt szekcióban megjelenik egy kártya. Figyeld meg a `hover:-translate-y-2` osztályt — vigyd föléje az egeret, hogy lásd a kártya emelkedését.
+Mentés. Az tónusozott szekcióban megjelenik egy kártya. Figyeld meg a `hover:-translate-y-2` osztályt — vigyd föléje az egeret, hogy lásd a kártya emelkedését.
 
 ### 2.5. lépés: A második és harmadik kártya hozzáadása
 
@@ -130,9 +130,9 @@ Az első kártya után add hozzá:
 
 ## 3. feladat: Túraútvonalak szekció
 
-Az Útvonalak szekció három kártyát mutat — mindegyiken egy fotó, ami hoverre zoomol, egy nehézségi jelvény és egy metaadat sor.
+Az Útvonalak szekció három kártyát mutat — mindegyiken egy fotó, amely hover esetén zoomol, egy nehézségi jelvény és egy metaadatsor.
 
-### 3.1. lépés: A szekció keret hozzáadása
+### 3.1. lépés: A szekcióváz hozzáadása
 
 Az Előnyök szekció záró `</section>` tagje után:
 
@@ -144,7 +144,7 @@ Az Előnyök szekció záró `</section>` tagje után:
 </section>
 ```
 
-### 3.2. lépés: A szekció fejléc hozzáadása egy "Összes megtekintése" linkkel
+### 3.2. lépés: A szekciófejléc hozzáadása egy „Összes megtekintése" linkkel
 
 A belső `<div>` belsejébe:
 
@@ -157,7 +157,7 @@ A belső `<div>` belsejébe:
 </div>
 ```
 
-Mentés. Meg kell jelennie a szekció fejlécének + a link sornak.
+Mentés. Meg kell jelennie a szekciófejlécnek és a linksornak.
 
 ### 3.3. lépés: A kártyarács konténer hozzáadása
 
@@ -193,10 +193,10 @@ Ez a kártya vezeti be a `group` + `group-hover:scale-105` mintát. Olvasd el a 
 </div>
 ```
 
-**Hogyan működik a hover zoom:**
-- `group` a külső `<div>`-en — ezt az elemet jelöli meg hover kiváltóként
-- `group-hover:scale-105` a `<img>` elemen — méretezi a képet, amikor a szülőre rámutatnak
-- `overflow-hidden` a külső `<div>`-en — körülvágja a méretezett képet, hogy ne lógjon ki a kártya keretéből
+**Hogyan működik a hover-zoom:**
+- `group` a külső `<div>`-en — ezt az elemet jelöli meg hover-kiváltóként
+- `group-hover:scale-105` a `<img>` elemen — nagyítja a képet, amikor a szülőelemre mutatnak
+- `overflow-hidden` a külső `<div>`-en — körülvágja a nagyított képet, hogy ne lógjon ki a kártya keretéből
 - `overflow-hidden` nélkül a kép a kártyán *kívülre* méretezne és töröttnek látszana
 
 Mentés. Vigyd az egeret a kártya fölé, hogy lásd a fotó zoomolását.
@@ -223,7 +223,7 @@ Mentés. Vigyd az egeret a kártya fölé, hogy lásd a fotó zoomolását.
 </div>
 ```
 
-Figyeld meg a nehézségi jelvényt: `bg-blue-100 text-blue-700` a piros helyett — a "Könnyű" kék, a "Nehéz" piros.
+Figyeld meg a nehézségi jelvényt: `bg-blue-100 text-blue-700` a piros helyett — a „Könnyű" jelvény kék, a „Nehéz" piros.
 
 ### 3.6. lépés: A harmadik útvonalkártya hozzáadása
 
@@ -250,17 +250,17 @@ Figyeld meg a nehézségi jelvényt: `bg-blue-100 text-blue-700` a piros helyett
 ### 3.7. lépés: Az útvonalak szekció ellenőrzése
 
 - Három kártya egymás mellett asztali gépen, egymás alatt mobilon
-- Minden kártya fotójára hoverre az nagyobb lesz
-- A "Nehéz" jelvények pirosak, a "Könnyű" kék
-- A metaadat sor (óra, távolság, szintemelkedés) felső kerettel van elválasztva
+- Minden kártya fotója hover esetén megnő
+- A „Nehéz" jelvények pirosak, a „Könnyű" jelvény kék
+- A metaadatsor (idő, távolság, szintemelkedés) felső kerettel van elválasztva
 
 ---
 
 ## 4. feladat: Felszerelés szekció
 
-A Felszerelés szekciónak állandóan sötét háttere van (`bg-tura-brown-900`), öt félig átlátszó kártyával `backdrop-blur` effekttel.
+A Felszerelés szekciónak állandóan sötét háttere van (`bg-tura-brown-900`), öt félig átlátszó kártyával és `backdrop-blur`-hatással.
 
-### 4.1. lépés: A szekció keret hozzáadása
+### 4.1. lépés: A szekcióváz hozzáadása
 
 Az Útvonalak `</section>` után:
 
@@ -291,7 +291,7 @@ A szekción belül, de a `<div class="max-w-7xl ...">` elé add ezeket a tisztá
 
 Az `absolute inset-0 opacity-10` az SVG-ket 10%-os átlátszósággal tölti ki a szekciót — finom textúra, nem tartalom.
 
-### 4.3. lépés: A szekció fejléc hozzáadása
+### 4.3. lépés: A szekciófejléc hozzáadása
 
 A `<div class="max-w-7xl ...">` belsejébe:
 
@@ -302,7 +302,7 @@ A `<div class="max-w-7xl ...">` belsejébe:
 </div>
 ```
 
-### 4.4. lépés: Az 5-oszlopos rács hozzáadása
+### 4.4. lépés: Az 5 oszlopos rács hozzáadása
 
 A fejléc után:
 
@@ -381,19 +381,19 @@ A rácson belül:
 
 - Sötétbarna háttér a teljes látóablak szélességén
 - 5 kártya egy sorban asztali gépen, 3 tableten, 2 mobilon
-- A kártyákon látható a frosted/blur hatás (`backdrop-blur-sm`)
-- Fehér kör alakú ikon konténerek minden kártyán
+- Látható `backdrop-blur-sm` hatás a kártyákon
+- Fehér, kör alakú ikonkonténerek minden kártyán
 - Halvány dekoratív háromszögek a háttér sarkaiban
 
-> **Miért `bg-tura-brown-900` a `bg-bg-tinted` helyett?** Ez a szekció szándékosan mindig sötét — ez a design része, nem egy világos/sötét mód kapcsoló. A háttérszín hardkódolása itt helyes. A szemantikus `bg-bg-tinted` token azokhoz a szekciókhoz való, amelyeknek sötét módban másképp kell kinézniük.
+> **Miért `bg-tura-brown-900` a `bg-bg-tinted` helyett?** Ez a szekció szándékosan mindig sötét — ez a dizájn része, nem egy világos/sötét mód kapcsoló. A háttérszín beégetése itt helyes. A szemantikus `bg-bg-tinted` token azokhoz a szekciókhoz való, amelyeknek sötét módban másképp kell kinézniük.
 
 ---
 
 ## 5. feladat: Galéria szekció
 
-A Galéria CSS Gridet használ, amelyben egy kép két sort foglal el, valamint minden fotón szépiahatásból valódi színbe való hover átmenet látható.
+A Galéria CSS Gridet használ, amelyen egy kép két sort fog át, és minden fotón szépiahatásból valódi színbe váltó hover-átmenet látható.
 
-### 5.1. lépés: A szekció keret hozzáadása
+### 5.1. lépés: A szekcióváz hozzáadása
 
 A Felszerelés `</section>` után:
 
@@ -425,9 +425,9 @@ A `<div>` belsejébe, a `<h2>` után:
 
 Mentés. Két szépiaszínű fotó jelenik meg. Vigyd az egeret az egyikre — 1 másodperc alatt átmegy teljes színes megjelenítésbe és enyhén nagyobb lesz.
 
-> **Átmenet időtartama**: A `duration-1000` (1 másodperc) miatt a szépiahatásból valódi színbe való átmenet simának és tudatosnak érződik. Egy rövidebb időtartam, például a `duration-300`, hirtelen érzést keltene egy színszűrő váltásnál.
+> **Átmenet időtartama**: A `duration-1000` (1 másodperc) miatt a szépiahatásból valódi színbe való átmenet simának és tudatosnak érződik. Egy rövidebb időtartam, például a `duration-300`, hirtelen érzést keltene egy színszűrő-váltásnál.
 
-### 5.3. lépés: A maradék fotók hozzáadása, beleértve az átnyúló cellát
+### 5.3. lépés: A maradék fotók hozzáadása, beleértve az átfogó cellát
 
 Cseréld ki a teljes `<div class="grid ...">` elemet a kész galériára:
 
@@ -451,13 +451,13 @@ Cseréld ki a teljes `<div class="grid ...">` elemet a kész galériára:
 </div>
 ```
 
-**Hogyan működik az átnyúló cella**: A `row-start-1 row-end-3` a `gallery04.jpg` fájlon azt mondja a CSS Gridnek, hogy ezt a képet az 1. sor vonaltól a 3. sor vonalig helyezze el — két sort foglalva el. Ez csak a 3-oszlopos elrendezésben (`lg:grid-cols-3`) érvényesül. Mobilon és tableten a képek normálisan egymás alá rendeződnek.
+**Hogyan működik az átfogó cella**: A `row-start-1 row-end-3` a `gallery04.jpg` fájlon azt mondja a CSS Gridnek, hogy ezt a képet az 1. sorközti vonaltól a 3. sorközti vonalig helyezze el — két sort foglalva el. Ez csak a 3 oszlopos elrendezésben (`lg:grid-cols-3`) érvényesül. Mobilon és tableten a képek normálisan egymás alá rendeződnek.
 
 ### 5.4. lépés: A galéria ellenőrzése
 
 - Mind az öt fotó szépia tónusban jelenik meg
 - Bármelyik fotó fölé vive az egeret 1 másodperc alatt átmegy teljes színes megjelenítésbe
-- Széles asztali ablakon (`lg` töréspont), a `gallery04` magasabbnak kell lennie a többinél — két sor magasságát foglalja el
+- Széles asztali ablakon (`lg` töréspont) a `gallery04` magasabbnak kell lennie a többinél — két sor magasságát fogja át
 - Szűkítsd a böngészőt, hogy lásd, hogyan rendeződnek egymás alá a képek 1 oszlopba
 
 ---
@@ -477,7 +477,7 @@ git add .
 git commit -m "2. modul befejezve: előnyök, útvonalak, felszerelés és galéria szekciók"
 ```
 
-### 6.3. lépés: Merge és push
+### 6.3. lépés: Összefésülés és feltöltés
 
 ```bash
 git checkout main
@@ -489,22 +489,22 @@ git push origin main
 
 ---
 
-## A műhelymunka kész
+## A workshop kész
 
 Négy tartalmi szekciót adtál a VadonSzava oldalhoz:
 
-- ✅ Előnyök rács — 3-oszlopos reszponzív elrendezés, hover emelkedés hatás
+- ✅ Előnyök rácsa — 3 oszlopos reszponzív elrendezés, hover-emelkedés hatás
 - ✅ Túraútvonalak — kártyarács `group`/`group-hover:scale-105` képzoommal
-- ✅ Felszerelés — 5-oszlopos rács sötét háttéren backdrop-blur glassmorphism effekttel
-- ✅ Galéria — átnyúló rácscella + szépiahatásból valódi színbe való hover átmenet
+- ✅ Felszerelés — 5 oszlopos rács sötét háttéren, üveges (glassmorphism) `backdrop-blur`-hatással
+- ✅ Galéria — átfogó rácscella + szépiahatásból valódi színbe való hover-átmenet
 - ✅ Projekt feltöltve GitHubra
 
 **Következő modul**: Rólam szekció, Hírlevél és Lábléc megépítése — majd JavaScript sötét mód kapcsoló hozzáadása és a teljes reszponzív elrendezés átvizsgálása.
 
 ---
 
-## Kiegészítő feladat (Opcionális)
+## Kiegészítő feladat (opcionális)
 
-A PRD a `csovanyos.jpg` fájlt fel nem használt képként sorolja fel a projektben (§9 Ismert hiányosságok). Adj hozzá egy negyedik útvonalkártyát a "Csoványos" útvonalhoz ezzel a képpel. Nézd meg a meglévő három útvonalkártyát a struktúráért, és válassz nehézségi szintet, útvonalnevet és reális metaadatokat.
+A PRD a `csovanyos.jpg` fájlt fel nem használt képként sorolja fel a projektben (§9 Ismert hiányosságok). Adj hozzá egy negyedik útvonalkártyát a „Csoványos" útvonalhoz ezzel a képpel. Nézd meg a meglévő három útvonalkártyát a struktúráért, és válassz nehézségi szintet, útvonalnevet és reális metaadatokat.
 
-Ez szándékosan hallgatói feladatként van feltüntetve — a kép már megtalálható a kurzus erőforrásokban a `final-solution/public/img/csovanyos.jpg` elérési úton.
+Ez szándékosan tanulói feladatként van feltüntetve — a kép már megtalálható a kurzus erőforrásaiban a `final-solution/public/img/csovanyos.jpg` elérési úton.
